@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react' // https://redux.js.org/tutorials/quick-start
+import axios from 'axios'
+
+import { useSelector, useDispatch } from 'react-redux'
+import { Counter } from './features/counter/Counter';
+
+const API_LOGIN = `http://localhost:8000/auth/login`
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Redux Toolkit Quick Start
+      <Counter />
     </div>
   );
 }
